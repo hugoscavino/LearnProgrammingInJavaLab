@@ -1,5 +1,7 @@
 package com.learnprogramminginjava.basics;
 
+import com.learnprogramminginjava.basics.utils.CanineUtils;
+
 public class Canine {
 
     int age;
@@ -41,6 +43,15 @@ public class Canine {
         // Use external mapping API like Google Maps or the Phone's Mapping software
         // Implementation is not important for this example
         return 1.00;
+    }
+
+    /**
+     * Get the dog age if they were a human
+     * @param dogAge Age of the dog
+     * @return Dog's age if they were a human
+     */
+    public double getHumanAge(double dogAge) {
+        return CanineUtils.getHumanYear(dogAge);
     }
 
     public static void main(String[]args) {
