@@ -1,3 +1,4 @@
+package com.learnprogramminginjava.operators;
 /************************************************************************************
  * Copyright © 2024 LearnProgrammingInJava.com
  * Licensed under the MIT License (the "License"); you may not use this file except
@@ -8,30 +9,26 @@
  * CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  ************************************************************************************/
+class Invoice{
+    int invoiceId;
+}
 
-package com.learnprogramminginjava.basics.utils;
+public class MethodAssignment {
 
-public class CanineUtils {
+    static void processInvoice(Invoice i) {
+        i.invoiceId = i.invoiceId + 100;
+        // What do you expect here?
+        System.out.println(i.invoiceId);
+    }
+    static public void main(String[] args) {
+        Invoice invoice = new Invoice();
+        invoice.invoiceId = 100;
 
-    static public final short DOG_YEAR_FACTOR = 7;
-
-    /**
-     * Convert a human's age into Dog Years using
-     * the dog year ratio of 1:7.
-     *
-     * @param humanAge Human's age
-     * @return Human's age in terms of a dog years.
-     */
-    static public double getDogYears(double humanAge){
-            return humanAge / DOG_YEAR_FACTOR;
+        processInvoice(invoice);
+        // What do you expect here after sending
+        // the invoice to the processInvoice method
+        // 100 or 200?
+        System.out.println(invoice.invoiceId);
     }
 
-    /** Convert a Dog's age into Human Years
-     *
-     * @param dogAge The Human's age
-     * @return Multiply the dog's age by the relative life span of a dog
-     */
-    static public double getHumanYear(double dogAge){
-        return dogAge * DOG_YEAR_FACTOR;
-    }
 }
