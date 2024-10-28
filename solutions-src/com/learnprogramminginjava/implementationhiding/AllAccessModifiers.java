@@ -1,3 +1,4 @@
+package com.learnprogramminginjava.implementationhiding;
 /************************************************************************************
  * Copyright © 2024 LearnProgrammingInJava.com
  * Licensed under the MIT License (the "License"); you may not use this file except
@@ -8,23 +9,27 @@
  * CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  ************************************************************************************/
-package com.learnprogramminginjava.control;
 
-import java.util.Calendar;
+public class AllAccessModifiers {
 
-public class IfElse {
+    public void aPublicMethod(){
+        System.out.println("Public Method");
+    }
+    protected void aProtectedMethod(){
+        System.out.println("Protected Method");
+    }
+    void aDefaultMethod(){
+        System.out.println("Default Method");
+    }
+    private void aPrivateMethod(){
+        System.out.println("Private Method");
+    }
+
     public static void main(String[] args) {
-
-        int today = Calendar.getInstance().get(Calendar.DAY_OF_WEEK);
-        boolean isMonday = (today == Calendar.MONDAY);
-        boolean isTheWeekend = (today == Calendar.SATURDAY) || (today == Calendar.SUNDAY);
-
-        if (isMonday) {
-            System.out.println("You have a case of the Mondaze :(");
-        } else if (isTheWeekend) {
-            System.out.println("Happy Weekend! :)");
-        } else {
-            System.out.println("You in a weekday :|");
-        }
+        AllAccessModifiers allAccessModifiers = new AllAccessModifiers();
+        allAccessModifiers.aPublicMethod();
+        allAccessModifiers.aProtectedMethod();
+        allAccessModifiers.aDefaultMethod();
+        allAccessModifiers.aPrivateMethod();
     }
 }

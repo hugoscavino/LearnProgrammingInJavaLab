@@ -15,7 +15,17 @@ specific language governing permissions and limitations under the License.
 
 # Learn Programming in Java
 
-## Lab Control Flow
+## Lab Implementation Hiding
 
-### If-Else
+### Access Modifiers
+
+| Modifier  | Class | Package | Subclass | Clients |
+|-----------|-------|---------|----------|---------|
+| public    | ✔     | ✔       | ✔        | ✔       |
+| protected | ✔     | ✔       | ✔        | ✖       |
+| (default) | ✔     | ✔       | ✖        | ✖       |
+| private   | ✔     | ✖       | ✖        | ✖       |
+
+#### Public
+
 
