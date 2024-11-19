@@ -1,14 +1,10 @@
 package com.learnprogramminginjava.reuse;
 
-public class Engine {
-    private final String name;
+public record Engine(String name) {
 
     public Engine(String name) {
         this.name = name;
-    }
-
-    public String getName() {
-        return name;
+        System.out.println("Engine Name: " + this.name);
     }
 
     @Override
