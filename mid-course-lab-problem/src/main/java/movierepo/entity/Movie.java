@@ -5,11 +5,11 @@ import java.util.Locale;
 
 public class Movie implements Comparable<Movie> {
 
-    private final int id;
-    private final String name;
-    private final int year;
-    private final Month month;
-    private final Locale locale;
+    // id;
+    // name;
+    // year;
+    // month;
+    // Locale locale;
 
     /**
      * Create a no arg constructor
@@ -41,19 +41,11 @@ public class Movie implements Comparable<Movie> {
         // TODO
     }
 
-    public int getId() { return id; }
-    public String getName() { return name; }
-    public int getYear() { return year; }
-    public Locale getLocale() { return locale; }
-    public Month getMonth() { return month; }
-
-
     @Override
     public boolean equals(Object other) {
 
         // TODO
         return false;
-
     }
 
     /**
@@ -67,11 +59,7 @@ public class Movie implements Comparable<Movie> {
      * @return -1 if movieID < rhs.movieID, 1 if movieID > rhs.movieID, else 0 as they are equal
      */
     public int compareTo(Movie rhs){
-        if (this.id < rhs.getId()){
-            return -1;
-        } else if (this.id > rhs.getId()){
-            return 1;
-        }
+
         return 0;
     }
 
@@ -86,15 +74,4 @@ public class Movie implements Comparable<Movie> {
         }
     }
 
-    @Override
-    public String toString() {
-
-        return "{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", year=" + year +
-                ", month=" + month +
-                ", locale=" + locale +
-                '}';
-    }
 }

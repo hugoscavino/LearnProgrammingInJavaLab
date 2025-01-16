@@ -52,9 +52,9 @@ public class MovieDatabaseImpl implements MovieDatabase {
         return null;
     }
 
-    public List<Movie> getMovies() {
-        return movies;
-    }
+    //public XXXX {
+    //    return movies;
+    //}
 
     public static void main(String[] args) {
         StreamHandler streamHandler = new StreamHandler(System.out, new SimpleFormatter());

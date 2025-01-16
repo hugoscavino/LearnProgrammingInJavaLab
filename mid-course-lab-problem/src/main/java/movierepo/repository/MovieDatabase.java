@@ -5,5 +5,7 @@ import com.lastname.movierepo.entity.Movie;
 import java.util.List;
 
 public interface MovieDatabase {
-    List<Movie> getMovies();
+
+    // Return a List of Movie types
+    // XXX<XXX> getXXX();
 }
